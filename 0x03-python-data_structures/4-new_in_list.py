@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-def no_c(my_string):
-    new_string = []
-    for i in my_string:
-        if i == 'c' or i == 'C':
-            continue
-        new_string.append(i)
-    return ("".join(new_string))
+def new_in_list(my_list, idx, element):
+    if (idx < 0) or (idx > (len(my_list)-1)):
+        return my_list
+
+    copy = [x for x in my_list]
+    copy[idx] = element
+    return copy
